@@ -34,16 +34,16 @@ const Events: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="relative z-10 container mx-auto px-8 sm:px-12 lg:px-16 py-12 text-center"
+            className="relative z-10 container mx-auto px-6 sm:px-8 lg:px-12 py-8 text-center"
           >
             <div className="inline-flex items-center space-x-2 space-x-reverse bg-white/20 backdrop-blur-xl border border-white/30 rounded-full px-6 py-3 mb-8">
               <Sparkles className="w-5 h-5 text-purple-600" />
               <span className="text-gray-800 font-black">رویدادهای علمی</span>
             </div>
-            <h1 className="text-4xl lg:text-7xl font-black mb-6 text-gray-800">
+            <h1 className="text-2xl lg:text-4xl font-black mb-6 text-gray-800">
               رویدادهای آینده
             </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-semibold">
+            <p className="text-base text-gray-700 max-w-3xl mx-auto leading-relaxed font-semibold">
               به برنامه‌های آموزشی و علمی ما بپیوندید
             </p>
           </motion.div>
@@ -83,38 +83,38 @@ const Events: React.FC = () => {
                       </div>
 
                       {/* Event Content */}
-                      <div className="lg:w-2/3 p-10">
-                        <h3 className="text-3xl lg:text-4xl font-black text-gray-800 mb-6 group-hover:text-purple-600 transition-colors">
+                      <div className="lg:w-2/3 p-6">
+                        <h3 className="text-xl lg:text-2xl font-black text-gray-800 mb-4 group-hover:text-purple-600 transition-colors">
                           {event.title}
                         </h3>
                         
-                        <p className="text-gray-700 mb-8 leading-relaxed text-lg font-semibold">
+                        <p className="text-gray-700 mb-6 leading-relaxed text-base font-semibold">
                           {event.description}
                         </p>
 
                         {/* Event Details */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                           <div className="flex items-center space-x-3 space-x-reverse">
-                            <Calendar className="w-6 h-6 text-purple-500" />
+                            <Calendar className="w-5 h-5 text-purple-500" />
                             <div>
-                              <p className="font-black text-gray-800">تاریخ</p>
-                              <p className="text-gray-700 font-semibold">{event.date}</p>
+                              <p className="font-black text-gray-800 text-sm">تاریخ</p>
+                              <p className="text-gray-700 font-semibold text-sm">{event.date}</p>
                             </div>
                           </div>
                           
                           <div className="flex items-center space-x-3 space-x-reverse">
-                            <Clock className="w-6 h-6 text-purple-500" />
+                            <Clock className="w-5 h-5 text-purple-500" />
                             <div>
-                              <p className="font-black text-gray-800">زمان</p>
-                              <p className="text-gray-700 font-semibold">{event.time}</p>
+                              <p className="font-black text-gray-800 text-sm">زمان</p>
+                              <p className="text-gray-700 font-semibold text-sm">{event.time}</p>
                             </div>
                           </div>
                           
                           <div className="flex items-center space-x-3 space-x-reverse">
-                            <MapPin className="w-6 h-6 text-purple-500" />
+                            <MapPin className="w-5 h-5 text-purple-500" />
                             <div>
-                              <p className="font-black text-gray-800">مکان</p>
-                              <p className="text-gray-700 font-semibold">{event.location}</p>
+                              <p className="font-black text-gray-800 text-sm">مکان</p>
+                              <p className="text-gray-700 font-semibold text-sm">{event.location}</p>
                             </div>
                           </div>
                         </div>
@@ -127,7 +127,7 @@ const Events: React.FC = () => {
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05, y: -3 }}
                             whileTap={{ scale: 0.95 }}
-                            className="flex items-center justify-center space-x-2 space-x-reverse bg-gradient-to-r from-purple-500 to-emerald-500 hover:from-purple-600 hover:to-emerald-600 text-white px-8 py-4 rounded-2xl font-black transition-all duration-200"
+                            className="flex items-center justify-center space-x-2 space-x-reverse bg-gradient-to-r from-purple-500 to-emerald-500 hover:from-purple-600 hover:to-emerald-600 text-white px-6 py-3 rounded-2xl font-black text-sm transition-all duration-200"
                           >
                             <Users className="w-5 h-5" />
                             <span>ثبت‌نام در رویداد</span>
@@ -138,7 +138,7 @@ const Events: React.FC = () => {
                             whileHover={{ scale: 1.05, y: -3 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={() => setSelectedEvent(event.id)}
-                            className="flex items-center justify-center space-x-2 space-x-reverse bg-white/30 backdrop-blur-md border border-white/40 text-gray-700 hover:text-purple-600 px-8 py-4 rounded-2xl font-black transition-all duration-200"
+                            className="flex items-center justify-center space-x-2 space-x-reverse bg-white/30 backdrop-blur-md border border-white/40 text-gray-700 hover:text-purple-600 px-6 py-3 rounded-2xl font-black text-sm transition-all duration-200"
                           >
                             <span>اطلاعات کامل</span>
                           </motion.button>
@@ -155,17 +155,17 @@ const Events: React.FC = () => {
               variants={itemVariants}
               className="mt-16 text-center"
             >
-              <div className="bg-white/30 backdrop-blur-md border border-white/40 rounded-3xl p-10 max-w-2xl mx-auto">
-                <h3 className="text-2xl font-black text-gray-800 mb-6">
+              <div className="bg-white/30 backdrop-blur-md border border-white/40 rounded-3xl p-6 max-w-2xl mx-auto">
+                <h3 className="text-xl font-black text-gray-800 mb-4">
                   رویدادهای بیشتر در راه است
                 </h3>
-                <p className="text-gray-700 mb-8 leading-relaxed font-semibold text-lg">
+                <p className="text-gray-700 mb-6 leading-relaxed font-semibold text-base">
                   برای اطلاع از جدیدترین رویدادها و برنامه‌های آموزشی، در خبرنامه ما عضو شوید
                 </p>
                 <motion.button
                   whileHover={{ scale: 1.05, y: -3 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-purple-500 to-emerald-500 hover:from-purple-600 hover:to-emerald-600 text-white px-10 py-4 rounded-2xl font-black text-lg transition-all duration-200"
+                  className="bg-gradient-to-r from-purple-500 to-emerald-500 hover:from-purple-600 hover:to-emerald-600 text-white px-8 py-3 rounded-2xl font-black text-base transition-all duration-200"
                 >
                   عضویت در خبرنامه
                 </motion.button>
@@ -182,7 +182,7 @@ const Events: React.FC = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
-          onClick={() => setSelectedEvent(null)}
+          className="container mx-auto px-6 sm:px-8 lg:px-12 py-8"
         >
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}

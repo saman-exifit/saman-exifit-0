@@ -79,16 +79,16 @@ const Contact: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="relative z-10 container mx-auto px-8 sm:px-12 lg:px-16 py-12 text-center"
+            className="relative z-10 container mx-auto px-6 sm:px-8 lg:px-12 py-8 text-center"
           >
             <div className="inline-flex items-center space-x-2 space-x-reverse bg-white/20 backdrop-blur-xl border border-white/30 rounded-full px-6 py-3 mb-8">
               <Sparkles className="w-5 h-5 text-purple-600" />
               <span className="text-gray-800 font-black">ارتباط با ما</span>
             </div>
-            <h1 className="text-4xl lg:text-7xl font-black mb-6 text-gray-800">
+            <h1 className="text-2xl lg:text-4xl font-black mb-6 text-gray-800">
               تماس با ما
             </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-semibold">
+            <p className="text-base text-gray-700 max-w-3xl mx-auto leading-relaxed font-semibold">
               آماده پاسخگویی به سوالات و ارائه مشاوره تخصصی هستیم
             </p>
           </motion.div>
@@ -102,16 +102,16 @@ const Contact: React.FC = () => {
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="container mx-auto px-8 sm:px-12 lg:px-16 py-8"
+            className="container mx-auto px-6 sm:px-8 lg:px-12 py-8"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Info */}
               <motion.div variants={itemVariants}>
-                <h2 className="text-4xl font-black text-gray-800 mb-10">
+                <h2 className="text-2xl font-black text-gray-800 mb-6">
                   اطلاعات تماس
                 </h2>
                 
-                <div className="space-y-8">
+                <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <motion.div
                       key={index}
@@ -119,23 +119,23 @@ const Contact: React.FC = () => {
                       whileHover={{ scale: 1.03, x: 8 }}
                       className="group"
                     >
-                      <div className="bg-white/30 backdrop-blur-md border border-white/40 rounded-3xl p-8 hover:shadow-2xl transition-all duration-200">
+                      <div className="bg-white/30 backdrop-blur-md border border-white/40 rounded-3xl p-6 hover:shadow-2xl transition-all duration-200">
                         <div className="flex items-start space-x-4 space-x-reverse">
                           <motion.div
                             whileHover={{ rotate: 360 }}
                             transition={{ duration: 0.3 }}
-                            className="flex-shrink-0 w-14 h-14 bg-gradient-to-r from-purple-500 to-emerald-500 rounded-2xl flex items-center justify-center"
+                            className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-500 to-emerald-500 rounded-2xl flex items-center justify-center"
                           >
-                            <info.icon className="w-7 h-7 text-white" />
+                            <info.icon className="w-6 h-6 text-white" />
                           </motion.div>
                           <div>
-                            <h3 className="text-xl font-black text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">
+                            <h3 className="text-lg font-black text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">
                               {info.title}
                             </h3>
-                            <p className="text-gray-700 font-bold mb-2 text-lg">
+                            <p className="text-gray-700 font-bold mb-2 text-base">
                               {info.content}
                             </p>
-                            <p className="text-gray-600 font-semibold">
+                            <p className="text-gray-600 font-semibold text-sm">
                               {info.subtitle}
                             </p>
                           </div>
@@ -148,31 +148,31 @@ const Contact: React.FC = () => {
                 {/* Map Placeholder */}
                 <motion.div
                   variants={itemVariants}
-                  className="mt-10 bg-white/30 backdrop-blur-md border border-white/40 rounded-3xl p-8"
+                  className="mt-6 bg-white/30 backdrop-blur-md border border-white/40 rounded-3xl p-6"
                 >
-                  <h3 className="text-xl font-black text-gray-800 mb-6">
+                  <h3 className="text-lg font-black text-gray-800 mb-4">
                     موقعیت ما
                   </h3>
-                  <div className="h-72 bg-gradient-to-br from-purple-100 to-emerald-100 rounded-2xl flex items-center justify-center">
-                    <p className="text-gray-700 font-bold text-lg">نقشه موقعیت مکانی</p>
+                  <div className="h-48 bg-gradient-to-br from-purple-100 to-emerald-100 rounded-2xl flex items-center justify-center">
+                    <p className="text-gray-700 font-bold text-base">نقشه موقعیت مکانی</p>
                   </div>
                 </motion.div>
               </motion.div>
 
               {/* Contact Form */}
               <motion.div variants={itemVariants}>
-                <div className="bg-white/30 backdrop-blur-md border border-white/40 rounded-3xl p-10">
-                  <h2 className="text-4xl font-black text-gray-800 mb-10">
+                <div className="bg-white/30 backdrop-blur-md border border-white/40 rounded-3xl p-6">
+                  <h2 className="text-2xl font-black text-gray-800 mb-6">
                     فرم تماس
                   </h2>
 
-                  <form onSubmit={handleSubmit} className="space-y-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <motion.div
                         whileFocus={{ scale: 1.01 }}
                         className="group"
                       >
-                        <label className="flex items-center space-x-2 space-x-reverse text-gray-800 font-black mb-3">
+                        <label className="flex items-center space-x-2 space-x-reverse text-gray-800 font-black mb-2 text-sm">
                           <User className="w-5 h-5 text-purple-500" />
                           <span>نام و نام خانوادگی</span>
                         </label>
@@ -181,7 +181,7 @@ const Contact: React.FC = () => {
                           name="name"
                           value={formData.name}
                           onChange={handleInputChange}
-                          className="w-full px-6 py-4 bg-white/30 backdrop-blur-md border border-white/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-200 font-semibold"
+                          className="w-full px-4 py-3 bg-white/30 backdrop-blur-md border border-white/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-200 font-semibold text-sm"
                           required
                         />
                       </motion.div>
@@ -190,7 +190,7 @@ const Contact: React.FC = () => {
                         whileFocus={{ scale: 1.01 }}
                         className="group"
                       >
-                        <label className="flex items-center space-x-2 space-x-reverse text-gray-800 font-black mb-3">
+                        <label className="flex items-center space-x-2 space-x-reverse text-gray-800 font-black mb-2 text-sm">
                           <Mail className="w-5 h-5 text-purple-500" />
                           <span>ایمیل</span>
                         </label>
@@ -199,18 +199,18 @@ const Contact: React.FC = () => {
                           name="email"
                           value={formData.email}
                           onChange={handleInputChange}
-                          className="w-full px-6 py-4 bg-white/30 backdrop-blur-md border border-white/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-200 font-semibold"
+                          className="w-full px-4 py-3 bg-white/30 backdrop-blur-md border border-white/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-200 font-semibold text-sm"
                           required
                         />
                       </motion.div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <motion.div
                         whileFocus={{ scale: 1.01 }}
                         className="group"
                       >
-                        <label className="flex items-center space-x-2 space-x-reverse text-gray-800 font-black mb-3">
+                        <label className="flex items-center space-x-2 space-x-reverse text-gray-800 font-black mb-2 text-sm">
                           <Phone className="w-5 h-5 text-purple-500" />
                           <span>شماره تماس</span>
                         </label>
@@ -219,7 +219,7 @@ const Contact: React.FC = () => {
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="w-full px-6 py-4 bg-white/30 backdrop-blur-md border border-white/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-200 font-semibold"
+                          className="w-full px-4 py-3 bg-white/30 backdrop-blur-md border border-white/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-200 font-semibold text-sm"
                         />
                       </motion.div>
 
@@ -227,14 +227,14 @@ const Contact: React.FC = () => {
                         whileFocus={{ scale: 1.01 }}
                         className="group"
                       >
-                        <label className="text-gray-800 font-black mb-3 block">
+                        <label className="text-gray-800 font-black mb-2 block text-sm">
                           موضوع
                         </label>
                         <select
                           name="subject"
                           value={formData.subject}
                           onChange={handleInputChange}
-                          className="w-full px-6 py-4 bg-white/30 backdrop-blur-md border border-white/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-200 font-semibold"
+                          className="w-full px-4 py-3 bg-white/30 backdrop-blur-md border border-white/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-200 font-semibold text-sm"
                           required
                         >
                           <option value="">انتخاب موضوع</option>
@@ -250,15 +250,15 @@ const Contact: React.FC = () => {
                       whileFocus={{ scale: 1.01 }}
                       className="group"
                     >
-                      <label className="text-gray-800 font-black mb-3 block">
+                      <label className="text-gray-800 font-black mb-2 block text-sm">
                         پیام شما
                       </label>
                       <textarea
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
-                        rows={6}
-                        className="w-full px-6 py-4 bg-white/30 backdrop-blur-md border border-white/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-200 resize-none font-semibold"
+                        rows={4}
+                        className="w-full px-4 py-3 bg-white/30 backdrop-blur-md border border-white/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-200 resize-none font-semibold text-sm"
                         placeholder="پیام خود را بنویسید..."
                         required
                       />
@@ -268,7 +268,7 @@ const Contact: React.FC = () => {
                       type="submit"
                       whileHover={{ scale: 1.05, y: -3 }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-full bg-gradient-to-r from-purple-500 to-emerald-500 hover:from-purple-600 hover:to-emerald-600 text-white py-5 rounded-2xl font-black text-lg flex items-center justify-center space-x-2 space-x-reverse transition-all duration-200"
+                      className="w-full bg-gradient-to-r from-purple-500 to-emerald-500 hover:from-purple-600 hover:to-emerald-600 text-white py-3 rounded-2xl font-black text-base flex items-center justify-center space-x-2 space-x-reverse transition-all duration-200"
                     >
                       <Send className="w-6 h-6" />
                       <span>ارسال پیام</span>
@@ -279,24 +279,24 @@ const Contact: React.FC = () => {
                 {/* Newsletter Signup */}
                 <motion.div
                   variants={itemVariants}
-                  className="mt-10 bg-gradient-to-r from-purple-500 to-emerald-500 rounded-3xl p-10 text-white"
+                  className="mt-6 bg-gradient-to-r from-purple-500 to-emerald-500 rounded-3xl p-6 text-white"
                 >
-                  <h3 className="text-2xl font-black mb-6">
+                  <h3 className="text-xl font-black mb-4">
                     عضویت در خبرنامه
                   </h3>
-                  <p className="mb-8 text-purple-100 font-semibold text-lg">
+                  <p className="mb-6 text-purple-100 font-semibold text-base">
                     از آخرین اخبار و رویدادها مطلع شوید
                   </p>
                   <div className="flex space-x-4 space-x-reverse">
                     <input
                       type="email"
                       placeholder="آدرس ایمیل شما"
-                      className="flex-1 px-6 py-4 bg-white/20 border border-white/20 rounded-2xl text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-white/50 font-semibold"
+                      className="flex-1 px-4 py-3 bg-white/20 border border-white/20 rounded-2xl text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-white/50 font-semibold text-sm"
                     />
                     <motion.button
                       whileHover={{ scale: 1.05, y: -2 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-white text-purple-600 px-8 py-4 rounded-2xl font-black hover:bg-gray-100 transition-colors"
+                      className="bg-white text-purple-600 px-6 py-3 rounded-2xl font-black text-sm hover:bg-gray-100 transition-colors"
                     >
                       عضویت
                     </motion.button>

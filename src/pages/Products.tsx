@@ -36,16 +36,16 @@ const Products: React.FC = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="relative z-10 container mx-auto px-8 sm:px-12 lg:px-16 py-12 text-center"
+            className="relative z-10 container mx-auto px-6 sm:px-8 lg:px-12 py-8 text-center"
           >
             <div className="inline-flex items-center space-x-2 space-x-reverse bg-white/20 backdrop-blur-xl border border-white/30 rounded-full px-6 py-3 mb-8">
               <Sparkles className="w-5 h-5 text-purple-600" />
               <span className="text-gray-800 font-black">محصولات نوآورانه</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black mb-6 text-gray-800">
+            <h1 className="text-2xl lg:text-4xl font-black mb-6 text-gray-800">
               محصولات ما
             </h1>
-            <p className="text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-semibold">
+            <p className="text-base text-gray-700 max-w-3xl mx-auto leading-relaxed font-semibold">
               راه‌حل‌های نوآورانه برای صنعت سلامت
             </p>
           </motion.div>
@@ -59,7 +59,7 @@ const Products: React.FC = () => {
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="container mx-auto px-8 sm:px-12 lg:px-16 py-8"
+            className="container mx-auto px-6 sm:px-8 lg:px-12 py-8"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
               {products.map((product) => (
@@ -85,17 +85,17 @@ const Products: React.FC = () => {
                     </div>
 
                     {/* Product Content */}
-                    <div className="p-8">
-                      <h3 className="text-xl font-black text-gray-800 mb-4 group-hover:text-purple-600 transition-colors line-clamp-2">
+                    <div className="p-6">
+                      <h3 className="text-lg font-black text-gray-800 mb-3 group-hover:text-purple-600 transition-colors line-clamp-2">
                         {product.title}
                       </h3>
                       
-                      <p className="text-gray-700 mb-6 leading-relaxed font-semibold line-clamp-3">
+                      <p className="text-gray-700 mb-4 leading-relaxed font-semibold line-clamp-3">
                         {product.description}
                       </p>
 
                       {/* Features Preview */}
-                      <div className="mb-6">
+                      <div className="mb-4">
                         <div className="flex flex-wrap gap-1">
                           {product.features.slice(0, 2).map((feature, index) => (
                             <span
@@ -118,7 +118,7 @@ const Products: React.FC = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.98 }}
                         onClick={() => setSelectedProduct(product.id)}
-                        className="w-full bg-gradient-to-r from-purple-500 to-emerald-500 hover:from-purple-600 hover:to-emerald-600 text-white py-4 rounded-2xl font-black flex items-center justify-center space-x-2 space-x-reverse transition-all duration-200"
+                        className="w-full bg-gradient-to-r from-purple-500 to-emerald-500 hover:from-purple-600 hover:to-emerald-600 text-white py-3 rounded-2xl font-black text-sm flex items-center justify-center space-x-2 space-x-reverse transition-all duration-200"
                       >
                         <span>اطلاعات کامل</span>
                         <ArrowRight className="w-4 h-4" />
@@ -178,23 +178,23 @@ const Products: React.FC = () => {
                 </div>
 
                 {/* Product Details */}
-                <div className="p-8 sm:p-10">
+                <div className="p-6 sm:p-8">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {/* Left Column */}
                     <div>
-                      <h2 className="text-3xl sm:text-4xl font-black text-gray-800 mb-6">
+                      <h2 className="text-2xl sm:text-3xl font-black text-gray-800 mb-4">
                         {selectedProductData.title}
                       </h2>
                       
-                      <p className="text-gray-700 leading-relaxed mb-8 text-lg font-semibold">
+                      <p className="text-gray-700 leading-relaxed mb-6 text-base font-semibold">
                         {selectedProductData.fullDescription}
                       </p>
 
                       {/* Rating */}
-                      <div className="flex items-center space-x-2 space-x-reverse mb-8">
+                      <div className="flex items-center space-x-2 space-x-reverse mb-6">
                         <div className="flex space-x-1 space-x-reverse">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                            <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                           ))}
                         </div>
                         <span className="text-gray-700 font-bold">(4.8 از 5)</span>
@@ -203,11 +203,11 @@ const Products: React.FC = () => {
 
                     {/* Right Column */}
                     <div>
-                      <h3 className="text-2xl font-black text-gray-800 mb-6">
+                      <h3 className="text-xl font-black text-gray-800 mb-4">
                         ویژگی‌های کلیدی
                       </h3>
                       
-                      <div className="space-y-4 mb-8">
+                      <div className="space-y-3 mb-6">
                         {selectedProductData.features.map((feature, index) => (
                           <motion.div
                             key={index}
@@ -216,10 +216,10 @@ const Products: React.FC = () => {
                             transition={{ delay: index * 0.03, duration: 0.2 }}
                             className="flex items-center space-x-3 space-x-reverse"
                           >
-                            <div className="w-8 h-8 bg-gradient-to-r from-purple-100 to-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                              <Check className="w-5 h-5 text-purple-600" />
+                            <div className="w-6 h-6 bg-gradient-to-r from-purple-100 to-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <Check className="w-4 h-4 text-purple-600" />
                             </div>
-                            <span className="text-gray-700 font-semibold text-lg">{feature}</span>
+                            <span className="text-gray-700 font-semibold text-base">{feature}</span>
                           </motion.div>
                         ))}
                       </div>
@@ -229,7 +229,7 @@ const Products: React.FC = () => {
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.98 }}
-                          className="w-full bg-gradient-to-r from-purple-500 to-emerald-500 hover:from-purple-600 hover:to-emerald-600 text-white py-4 rounded-2xl font-black text-lg transition-all duration-200"
+                          className="w-full bg-gradient-to-r from-purple-500 to-emerald-500 hover:from-purple-600 hover:to-emerald-600 text-white py-3 rounded-2xl font-black text-base transition-all duration-200"
                         >
                           درخواست مشاوره
                         </motion.button>
@@ -237,7 +237,7 @@ const Products: React.FC = () => {
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.98 }}
-                          className="w-full bg-white/30 backdrop-blur-md border border-white/40 text-gray-700 hover:text-purple-600 py-4 rounded-2xl font-black text-lg transition-all duration-200"
+                          className="w-full bg-white/30 backdrop-blur-md border border-white/40 text-gray-700 hover:text-purple-600 py-3 rounded-2xl font-black text-base transition-all duration-200"
                         >
                           دانلود بروشور
                         </motion.button>
